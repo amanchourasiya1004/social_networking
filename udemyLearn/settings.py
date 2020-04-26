@@ -25,7 +25,7 @@ SECRET_KEY = 'pn^=q6_l2=#rh)%c+v3x&%21zc_g1dbqc(sdp_z3_smcnw-1j7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://quiet-meadow-05763.herokuapp.com/']
 
 
 # Application definition
