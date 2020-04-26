@@ -11,7 +11,7 @@ from manager.models import Manager
 
 # Create your views here.
 def home(request):
-    site = Main.objects.get(pk = 2)
+    site = "Mysite"
     news_dt = News.objects.filter(confirm = 1)
     cat = Cat.objects.all()
     popnews = News.objects.filter(confirm = 1).order_by('-show')
@@ -22,7 +22,7 @@ def home(request):
 def about(request):
     cat = Cat.objects.all()
     subcat = SubCat.objects.all()
-    site = Main.objects.get(pk = 2)
+    site = "Mysite"
     popnews = News.objects.filter(confirm = 1).order_by('-show')
     return render(request, 'front/about.html', {'site' : site, 'popnews' : popnews, 'cat' : cat, 'subcat' : subcat})
 
