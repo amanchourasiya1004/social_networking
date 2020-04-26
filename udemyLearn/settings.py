@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_crontab',
     'qr_code',
 ]
 
@@ -86,8 +85,12 @@ WSGI_APPLICATION = 'udemyLearn.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'ec2-34-233-186-251.compute-1.amazonaws.com',
+        'NAME': 'dff8uf8kdq4uld',
+        'PASSWORD': '5f7e927a150dffefb38bfb0bd0fd76286ce9a763080de9cd0a8a012e7ff31717',
+        'PORT': 5432,
+        'USER': 'ogukvlfarpnqqs',
     }
 }
 
@@ -133,7 +136,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CRONJOBS = [
-
-    ('*/1 * * * *' , 'main.cron.my_job')
-]
