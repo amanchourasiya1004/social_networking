@@ -1,1 +1,1 @@
-web: gunicorn check.wsgi --log-file -
+web: gunicorn udemyLearn.wsgi --log-file -
