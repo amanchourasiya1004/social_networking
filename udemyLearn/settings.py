@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'udemyLearn.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'ec2-34-233-186-251.compute-1.amazonaws.com',
-        'NAME': 'dff8uf8kdq4uld',
-        'PASSWORD': '5f7e927a150dffefb38bfb0bd0fd76286ce9a763080de9cd0a8a012e7ff31717',
+        'HOST': 'ec2-52-86-73-86.compute-1.amazonaws.com',
+        'NAME': 'd59j98iuccunch',
+        'PASSWORD': 'd5960f7e891a5d205b3908292122d8b16c431c44745a8f904a8f358ff66bbffc',
         'PORT': 5432,
-        'USER': 'ogukvlfarpnqqs',
+        'USER': 'spqenzohyogwim',
     }
 }
 
