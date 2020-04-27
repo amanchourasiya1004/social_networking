@@ -51,3 +51,8 @@ def subcat_add(request):
         
     
     return render(request, 'back/subcat_add.html', {'cat':cat})
+
+def subcat_delete(request, pk):
+    sub = SubCat.objects.get(pk = pk)
+    sub.delete()
+    return redirect('subcat_list')

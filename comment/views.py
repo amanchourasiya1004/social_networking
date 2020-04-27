@@ -9,6 +9,8 @@ from django.contrib.auth.models import User, Group, Permission
 from manager.models import Manager
 import datetime
 import time
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 def news_cm_add(request, pk):
@@ -113,4 +115,20 @@ def comments_confirm(request,pk):
     comment.save()
 
     return redirect('comments_list')
+
+def comments_answer(request, pk):
+    if(request.method == 'POST'):
+        txt = request.POST.get('txt')
+        if(txt != ''):
+            to_email = Comment.objects.get(pk = pk).email
+            send_mail(
+                'sender_mail', 
+                txt,
+                'amanchourasiya1004@gmail.com',
+                [to_email], 
+                fail_silently=False,
+            )
+        else:
+            return render(request, 'back/error.html', {'error' : "Empty answer not allowed."})
+    return render(request, 'back/answer.html', {'pk' : pk})
             
